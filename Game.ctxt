@@ -1,5 +1,13 @@
 #BlueJ class context
 comment0.target=Game
-comment1.params=name\ g
-comment1.target=Game(java.lang.String,\ Genre)
-numComments=2
+comment1.params=name\ g\ p\ a
+comment1.target=Game(java.lang.String,\ Genre,\ Plateform,\ AgeRating)
+comment2.params=
+comment2.target=java.lang.String\ getName()
+comment3.params=
+comment3.target=Genre\ getGenre()
+comment4.params=
+comment4.target=Plateform\ getPlateform()
+comment5.params=
+comment5.target=AgeRating\ getAgeRating()
+numComments=6

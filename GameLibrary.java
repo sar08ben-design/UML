@@ -14,4 +14,21 @@ public class GameLibrary
     public void addGame(Game g){
         library.add(g);
     }
+    
+    public String gameName(Game g){
+    return g.getName();
+    }
+    
+    public Genre gameGenre(Game g){
+    return g.getGenre();
+    }
+    
+    public Plateform gamePlateform(Game g){
+    return g.getPlateform();
+    }
+    
+    public AgeRating gameAgeRating(Game g){
+    return g.getAgeRating();
+    }
+    
 }

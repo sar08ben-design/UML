@@ -1,5 +1,5 @@
 #BlueJ class context
 comment0.target=Online
-comment1.params=name\ g
-comment1.target=Online(java.lang.String,\ Genre)
+comment1.params=name\ g\ p\ a
+comment1.target=Online(java.lang.String,\ Genre,\ Plateform,\ AgeRating)
 numComments=2

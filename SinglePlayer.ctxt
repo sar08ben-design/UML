@@ -1,6 +1,5 @@
 #BlueJ class context
 comment0.target=SinglePlayer
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ SinglePlayer\ here.\r\n\r\n\ @author\ (your\ name)\r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
-comment1.params=name\ g
-comment1.target=SinglePlayer(java.lang.String,\ Genre)
+comment1.params=name\ g\ p\ a
+comment1.target=SinglePlayer(java.lang.String,\ Genre,\ Plateform,\ AgeRating)
 numComments=2

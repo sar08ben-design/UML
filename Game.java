@@ -7,7 +7,7 @@ public class Game
     public AgeRating a;
     
     public String name;
-    public Game(String name, Genre g)
+    public Game(String name, Genre g, Plateform p, AgeRating a)
     {
         //enum
         this.g = g;
@@ -16,6 +16,22 @@ public class Game
         
         this.name=name;
     }
-
+    
+    
+    public String getName(){
+        return name;
+    }
+    
+    public Genre getGenre(){
+        return g;
+    }
+    
+    public Plateform getPlateform(){
+        return p;
+    }
+    
+    public AgeRating getAgeRating(){
+        return a;
+    }
     
 }
