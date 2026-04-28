@@ -5,7 +5,7 @@
  * @author (your name here)
  * @version (version number or date here)
  */
-public enum Rates
+public enum AgeRating
 {
-    G,PG, PG13, R, NC17
+    E, E10, T, M, AO, 
 }
