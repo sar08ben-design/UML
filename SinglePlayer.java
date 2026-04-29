@@ -8,8 +8,9 @@ public class SinglePlayer extends Game {
     private String difficulty;
 
     public SinglePlayer(AgeRating ar, Genre g, Platform p,
-                        String name, int id, String dev, String detail,
-                        int seed, boolean saveWorld, int level, String difficulty) {
+                    String name, int id, String dev, String detail,
+                     int seed, boolean saveWorld, int level, String difficulty) 
+    {
         super(ar, g, p, name, id, dev, detail);
         this.seed = seed;
         this.saveWorld = saveWorld;
