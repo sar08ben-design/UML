@@ -23,8 +23,8 @@ public class GameLibrary
     return g.getGenre();
     }
     
-    public Plateform gamePlateform(Game g){
-    return g.getPlateform();
+    public Platform gamePlateform(Game g){
+    return g.getPlatform();
     }
     
     public AgeRating gameAgeRating(Game g){

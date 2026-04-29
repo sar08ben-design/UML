@@ -1,37 +1,51 @@
+import java.util.HashSet;
 
-public class Game
-{
-    //ENUM
-    public Genre g; 
-    public Plateform p;
-    public AgeRating a;
-    
-    public String name;
-    public Game(String name, Genre g, Plateform p, AgeRating a)
-    {
-        //enum
-        this.g = g;
-        this.p = p;
-        this.a = a;
-        
-        this.name=name;
+public abstract class Game {
+
+    private AgeRating ageRating;
+    private Genre genre;
+    private Platform platform;
+    private String name;
+    private int gameId;
+    private String developer;
+    private String detail;
+
+    public Game(AgeRating ageRating, Genre genre, Platform platform,
+               String name, int gameId, String developer, String detail) {
+        this.ageRating = ageRating;
+        this.genre = genre;
+        this.platform = platform;
+        this.name = name;
+        this.gameId = gameId;
+        this.developer = developer;
+        this.detail = detail;
+    }
+
+    public String getName() {
+        return name; 
     }
     
-    
-    public String getName(){
-        return name;
+    public int getGameId() {
+        return gameId; 
     }
     
-    public Genre getGenre(){
-        return g;
+    public AgeRating getAgeRating() { 
+        return ageRating; 
     }
     
-    public Plateform getPlateform(){
-        return p;
+    public Genre getGenre() { 
+        return genre; 
     }
     
-    public AgeRating getAgeRating(){
-        return a;
+    public Platform getPlatform() {
+        return platform; 
     }
     
+    public String getDeveloper() {
+        return developer; 
+    }
+
+    public String getDetail() {
+        return detail; 
+    }
 }
