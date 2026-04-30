@@ -1,9 +1,7 @@
 import java.util.HashSet;
 
-
 public class GameLibrary
 {
-        
     public HashSet<Game> library;   
     
     public GameLibrary()
@@ -13,6 +11,11 @@ public class GameLibrary
 
     public void addGame(Game g){
         library.add(g);
+    }
+    
+    public void removeGame(Game g)
+    {
+        library.remove(g);
     }
     
     public String gameName(Game g){
@@ -30,5 +33,14 @@ public class GameLibrary
     public AgeRating gameAgeRating(Game g){
     return g.getAgeRating();
     }
-    
+
+    public void listAllGame()
+    {
+        for(Game g : library)
+        {
+            g.showDetail();
+            System.out.println("-----------");
+        }
+    }
 }
+
