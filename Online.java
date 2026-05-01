@@ -13,7 +13,7 @@ public class Online extends MultiPlayer
                         int seed, boolean saveWorld, int level, String difficulty)
     {
         super(title, genre, ageRating, platform, userRating);
+
 >>>>>>> Stashed changes
     }
-    
 }

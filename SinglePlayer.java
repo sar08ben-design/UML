@@ -1,12 +1,12 @@
+
 <<<<<<< Updated upstream
 
-
 public class SinglePlayer extends Game {
-
 =======
 public class SinglePlayer extends Game
 {
 >>>>>>> Stashed changes
+
     private int seed;
     private boolean saveWorld;
     private int level;
@@ -23,6 +23,7 @@ public class SinglePlayer extends Game
                         int seed, boolean saveWorld, int level, String difficulty)
     {
         super(title, genre, ageRating, platform, userRating);
+
 >>>>>>> Stashed changes
         this.seed = seed;
         this.saveWorld = saveWorld;
@@ -56,4 +57,5 @@ public class SinglePlayer extends Game
         System.out.println("Save world status: " + saveWorld);
     }
 }
+
 >>>>>>> Stashed changes
