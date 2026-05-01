@@ -83,4 +83,5 @@ public class Game {
     public int hashCode() {
         return title.toLowerCase().hashCode() * 31 + platform.hashCode();
     }
+
 }
