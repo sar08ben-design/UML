@@ -1,38 +1,21 @@
-<<<<<<< Updated upstream
 
-
-public class SinglePlayer extends Game {
-
-=======
 public class SinglePlayer extends Game
 {
->>>>>>> Stashed changes
     private int seed;
     private boolean saveWorld;
     private int level;
     private String difficulty;
-
-<<<<<<< Updated upstream
-    public SinglePlayer(AgeRating ar, Genre g, Platform p,
-                        String name, int id, String dev, String detail,
-                        int seed, boolean saveWorld, int level, String difficulty) {
-        super(ar, g, p, name, id, dev, detail);
-=======
     public SinglePlayer(String title, Genre genre, AgeRating ageRating,
                         Platform platform, double userRating,
                         int seed, boolean saveWorld, int level, String difficulty)
     {
         super(title, genre, ageRating, platform, userRating);
->>>>>>> Stashed changes
+
         this.seed = seed;
         this.saveWorld = saveWorld;
         this.level = level;
         this.difficulty = difficulty;
     }
-<<<<<<< Updated upstream
-    
-}
-=======
 
     public void loadGame()
     {
@@ -56,4 +39,4 @@ public class SinglePlayer extends Game
         System.out.println("Save world status: " + saveWorld);
     }
 }
->>>>>>> Stashed changes
+
