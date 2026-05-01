@@ -68,20 +68,12 @@ public class Game {
     
     @Override
     public boolean equals(Object o) {
-        if (this == o){
-            return true;
-        }
-        if (!(o instanceof Game)){
-            return false;
-        }
         Game other = (Game) o;
-        return title.equalsIgnoreCase(other.title)
-               && platform == other.platform;
+        return title.equalsIgnoreCase(other.title) && platform == other.platform;
     }
-
+    
     @Override
     public int hashCode() {
-        return title.toLowerCase().hashCode() * 31 + platform.hashCode();
+        return title.toLowerCase().hashCode() + platform.hashCode();
     }
-
 }
