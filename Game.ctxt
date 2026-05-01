@@ -14,7 +14,7 @@ comment12.params=
 comment12.target=int\ hashCode()
 >>>>>>> Stashed changes
 comment2.params=
-comment2.target=java.lang.String\ getName()
+comment2.target=void\ startGame()
 comment3.params=
 <<<<<<< Updated upstream
 comment3.target=int\ getGameId()
