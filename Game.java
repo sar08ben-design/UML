@@ -39,7 +39,7 @@ public class Game {
         System.out.println("User rating: " + userRating);
         System.out.println("In progress: " + inProgress);
     }
-
+    
     public void updateRating(double newRating) {
         if (newRating < 0 || newRating > 5) {
             System.out.println("Invalid rating (0–5).");
