@@ -77,4 +77,16 @@ public class Game {
     public int hashCode() {
         return title.toLowerCase().hashCode() + platform.hashCode();
     }
+    
+    @Override
+    public String toString() {
+        return "Game{" +
+                "title='" + title + '\'' +
+                ", genre=" + genre +
+                ", ageRating=" + ageRating +
+                ", platform=" + platform +
+                ", userRating=" + userRating +
+                ", inProgress=" + inProgress +
+                '}';
+    }
 }
