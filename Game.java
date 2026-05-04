@@ -1,5 +1,11 @@
 import java.util.HashSet;
 
+/**
+ * Write a description of class h here.
+ *
+ * @author (Sarah, Anuj)
+ * @version (a version number or a date)
+ */
 public class Game {
 
     private String title;
@@ -76,5 +82,17 @@ public class Game {
     @Override
     public int hashCode() {
         return title.toLowerCase().hashCode() + platform.hashCode();
+    }
+    
+    @Override
+    public String toString() {
+        return "Game{" +
+                "title='" + title + '\'' +
+                ", genre=" + genre +
+                ", ageRating=" + ageRating +
+                ", platform=" + platform +
+                ", userRating=" + userRating +
+                ", inProgress=" + inProgress +
+                '}';
     }
 }

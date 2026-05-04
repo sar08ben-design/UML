@@ -1,6 +1,11 @@
 import java.util.HashSet;
 
-public class GameLibrary
+/**
+ * Write a description of class h here.
+ *
+ * @author (Sarah)
+ * @version (a version number or a date)
+ */public class GameLibrary
 {
     public HashSet<Game> library;   
     
