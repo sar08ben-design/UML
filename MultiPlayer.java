@@ -1,5 +1,5 @@
 import java.util.HashSet;
-//Author; Sarra
+
 public class MultiPlayer extends Game
 {
     private int partyMembers;
