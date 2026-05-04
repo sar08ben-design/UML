@@ -1,3 +1,5 @@
+//Author;Sarra
+
 public class Online extends MultiPlayer {
     
     private String severName;
@@ -27,13 +29,23 @@ public class Online extends MultiPlayer {
         System.out.println("Current ping: " + ping + " ms");
     }
 
-    public String getSeverName()  { return severName; }
+    public String getSeverName()  {
+        return severName;
+    }
     
-    public int getPing()          { return ping; }
+    public int getPing()          {
+        return ping; 
+    }
     
-    public boolean isConnected()  { return connected; }
+    public boolean isConnected()  {
+        return connected; 
+    }
 
-    public void setSeverName(String severName) { this.severName = severName; }
+    public void setSeverName(String severName) {
+        this.severName = severName;
+    }
     
-    public void setPing(int ping)              { this.ping = ping; }
+    public void setPing(int ping)  { 
+        this.ping = ping; 
+    }
 }

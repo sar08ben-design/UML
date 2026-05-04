@@ -1,5 +1,5 @@
 import java.util.HashSet;
-
+//Author; Sarra
 public class MultiPlayer extends Game
 {
     private int partyMembers;
@@ -23,14 +23,14 @@ public class MultiPlayer extends Game
     }
 
     public void removePlayer(String id) {
-    if (playerIds.contains(id)) {
-        playerIds.remove(id);
-        partyMembers--;
-        System.out.println("Player " + id + " removed.");
-    } else {
-        System.out.println("Player " + id + " not found.");
+        if (playerIds.contains(id)) {
+            playerIds.remove(id);
+            partyMembers--;
+            System.out.println("Player " + id + " removed.");
+        } else {
+            System.out.println("Player " + id + " not found.");
+        }
     }
-}
 
     public void addPlayerId(String id) {
         if (partyMembers >= maxPlayer) {
@@ -45,17 +45,32 @@ public class MultiPlayer extends Game
         System.out.println("Player " + id + " added.");
     }
 
-    public int getPartyMembers() { return partyMembers; }
+    public int getPartyMembers() { 
+        return partyMembers;
+    }
     
-    public String getPlayerId()     { return playerId; }
+    public String getPlayerId()     {
+        return playerId; 
+    }
     
-    public int getMaxPlayer()    { return maxPlayer; }
+    public int getMaxPlayer()    { 
+        return maxPlayer;
+    }
     
-    public String getHostName()  { return hostName; }
+    public String getHostName()  { 
+        return hostName;
+    }
 
-    public void setPlayerId(String playerId)  { this.playerId = playerId; }
+    public void setPlayerId(String playerId)  {
+        this.playerId = playerId;
+    }
     
-    public void setMaxPlayer(int maxPlayer)  { this.maxPlayer = maxPlayer; }
+    public void setMaxPlayer(int maxPlayer)  {
+        
+    this.maxPlayer = maxPlayer;
+    }
     
-    public void setHostName(String hostName) { this.hostName = hostName; }
+    public void setHostName(String hostName) {
+        this.hostName = hostName;
+    }
 }

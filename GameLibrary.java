@@ -33,7 +33,18 @@ public class GameLibrary
     public AgeRating gameAgeRating(Game g){
     return g.getAgeRating();
     }
-
+    
+    public boolean gameInLibrary(String title) {
+        for (Game g : library) {
+            if (g.getTitle().equals(title)) {
+                return true;
+            }
+        }
+        return false;
+    }
+    public void listGameDetail(Game g){
+        g.showDetail();
+    }
     public void listAllGame()
     {
         for(Game g : library)

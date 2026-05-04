@@ -36,8 +36,7 @@ public class Game {
 
     public void updateRating(double newRating) {
         if (newRating < 0 || newRating > 5) {
-            System.out.println("Invalid rating (0–5).");
-            return;
+            System.out.println("Invalid rating (0–5).");        
         }
         this.userRating = newRating;
     }

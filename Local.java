@@ -1,3 +1,5 @@
+//Author;Sarra
+
 public class Local extends MultiPlayer {
     
     
@@ -39,9 +41,16 @@ public class Local extends MultiPlayer {
     public String getLocation()      { return location; }
 
     public void setControllerCount(int controllerCount)
-    { this.controllerCount = controllerCount; }
-    public void setSplitScreen(boolean splitScreen)  
-    { this.splitScreen = splitScreen; }
+    { 
+        this.controllerCount = controllerCount;
+    }
+
+        public void setSplitScreen(boolean splitScreen)  
+    { 
+        this.splitScreen = splitScreen;
+    }
     public void setLocation(String location)         
-    { this.location = location; }
+    { 
+        this.location = location; 
+    }
 }
