@@ -1,5 +1,23 @@
 #BlueJ class context
 comment0.target=Local
-comment1.params=
-comment1.target=Local()
-numComments=2
+comment1.params=title\ genre\ ageRating\ platform\ userRating\ seed\ saveWorld\ level\ difficulty
+comment1.target=Local(java.lang.String,\ Genre,\ AgeRating,\ Platform,\ double,\ int,\ boolean,\ int,\ java.lang.String)
+comment10.params=location
+comment10.target=void\ setLocation(java.lang.String)
+comment2.params=
+comment2.target=void\ startLocalMatch()
+comment3.params=
+comment3.target=void\ endLocalMatch()
+comment4.params=
+comment4.target=void\ showSetup()
+comment5.params=
+comment5.target=int\ getControllerCount()
+comment6.params=
+comment6.target=boolean\ isSplitScreen()
+comment7.params=
+comment7.target=java.lang.String\ getLocation()
+comment8.params=controllerCount
+comment8.target=void\ setControllerCount(int)
+comment9.params=splitScreen
+comment9.target=void\ setSplitScreen(boolean)
+numComments=11
