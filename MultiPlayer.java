@@ -71,12 +71,24 @@ public class MultiPlayer extends Game
         this.playerId = playerId;
     }
     
-    public void setMaxPlayer(int maxPlayer)  {
-        
-    this.maxPlayer = maxPlayer;
+    public void setMaxPlayer(int maxPlayer)  {   
+        this.maxPlayer = maxPlayer;
     }
     
     public void setHostName(String hostName) {
         this.hostName = hostName;
+    }
+    
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        if (!super.equals(o)) return false;
+    
+        MultiPlayer other = (MultiPlayer) o;
+        return partyMembers == other.partyMembers &&
+               playerId == other.playerId &&
+               maxPlayer == other.maxPlayer &&
+               hostName.equalsIgnoreCase(other.hostName);
     }
 }
