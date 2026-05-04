@@ -39,4 +39,12 @@ public class StoryMode extends SinglePlayer
         finalBossUnlocked = true;
         System.out.println("Final boss unlocked!");
     }
+    
+    @Override
+    public String toString()
+    {
+        return super.toString() + ", StoryMode{" + "chapterName='" + 
+            chapterName + '\'' + ", missionNumber=" + missionNumber + 
+            ", finalBossUnlocked=" + finalBossUnlocked +'}';
+    }
 }
