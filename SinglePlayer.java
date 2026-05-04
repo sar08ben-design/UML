@@ -1,5 +1,10 @@
 
-
+/**
+ * Write a description of class h here.
+ *
+ * @author (Anuj)
+ * @version (a version number or a date)
+ */
 public class SinglePlayer extends Game
 {
     private int seed;

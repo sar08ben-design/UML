@@ -1,5 +1,11 @@
 import java.util.HashSet;
 
+/**
+ * Write a description of class h here.
+ *
+ * @author (Sarah, Anuj)
+ * @version (a version number or a date)
+ */
 public class Game {
 
     private String title;

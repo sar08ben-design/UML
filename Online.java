@@ -1,5 +1,11 @@
 //Author;Sarra
 
+/**
+ * Write a description of class h here.
+ *
+ * @author (Sarah)
+ * @version (a version number or a date)
+ */
 public class Online extends MultiPlayer {
     
     private String severName;

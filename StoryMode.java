@@ -1,4 +1,10 @@
 
+/**
+ * Write a description of class h here.
+ *
+ * @author (Anuj)
+ * @version (a version number or a date)
+ */
 public class StoryMode extends SinglePlayer
 {
     private String chapterName;
