@@ -1,3 +1,7 @@
+<<<<<<< Updated upstream
+=======
+//Author - Anuj
+>>>>>>> Stashed changes
 
 public class SinglePlayer extends Game
 {

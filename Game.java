@@ -1,7 +1,7 @@
 import java.util.HashSet;
 
 public class Game {
-
+    // constructor
     private String title;
     private Genre genre;
     private AgeRating ageRating;
@@ -21,6 +21,7 @@ public class Game {
     }
 
     public void startGame() {
+        // load resources, initialize state, then run
         inProgress = true;
         System.out.println("Starting game: " + title);
     }
@@ -75,5 +76,17 @@ public class Game {
     @Override
     public int hashCode() {
         return title.toLowerCase().hashCode() + platform.hashCode();
+    }
+    
+    @Override
+    public String toString() {
+        return "Game{" +
+                "title='" + title + '\'' +
+                ", genre=" + genre +
+                ", ageRating=" + ageRating +
+                ", platform=" + platform +
+                ", userRating=" + userRating +
+                ", inProgress=" + inProgress +
+                '}';
     }
 }
