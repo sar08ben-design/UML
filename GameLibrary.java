@@ -8,7 +8,7 @@ import java.util.HashSet;
  */
 public class GameLibrary
 {
-    private HashSet<Game> library;
+    public HashSet<Game> library;
 
     /**
      * Creates an empty game library.
@@ -25,10 +25,7 @@ public class GameLibrary
      */
     public void addGame(Game g)
     {
-        if (g != null)
-        {
-            library.add(g);
-        }
+        library.add(g);
     }
 
     /**
@@ -38,17 +35,14 @@ public class GameLibrary
      */
     public void removeGame(Game g)
     {
-        if (g != null)
-        {
-            library.remove(g);
-        }
+        library.remove(g);
     }
 
     /**
-     * Returns the name of a game.
+     * Returns the title of a game.
      *
      * @param g the game object
-     * @return the name of the game
+     * @return the title of the game
      */
     public String gameName(Game g)
     {
@@ -92,16 +86,14 @@ public class GameLibrary
      * Checks whether a game title exists in the library.
      *
      * @param title the title to search for
-     * @return true if the game is in the library, false otherwise
+     * @return true if the game exists, false otherwise
      */
     public boolean gameInLibrary(String title)
     {
-        if (title == null){
-            return false;
-        }
-
-        for (Game g : library){
-            if (g.getTitle().equalsIgnoreCase(title.trim())){
+        for (Game g : library)
+        {
+            if (g.getTitle().equalsIgnoreCase(title))
+            {
                 return true;
             }
         }
@@ -110,19 +102,22 @@ public class GameLibrary
     }
 
     /**
-     * Finds a game in the library by its title.
+     * Finds a game by its title.
      *
-     * @param title the title of the game to find
+     * @param title the title to search for
      * @return the matching game, or null if not found
      */
     public Game findGameByTitle(String title)
     {
-        if (title == null){
+        if (title == null)
+        {
             return null;
         }
 
-        for (Game g : library){
-            if (g.getTitle().equalsIgnoreCase(title.trim())){
+        for (Game g : library)
+        {
+            if (g.getTitle().equalsIgnoreCase(title.trim()))
+            {
                 return g;
             }
         }
@@ -137,24 +132,18 @@ public class GameLibrary
      */
     public void listGameDetail(Game g)
     {
-        if (g != null){
-            g.showDetail();
-        }
+        g.showDetail();
     }
 
     /**
-     * Displays all games stored in the library.
+     * Displays all games in the library.
      */
     public void listAllGame()
     {
-        if (library.isEmpty()){
-            System.out.println("Library is empty.");
-        }
-        else{
-            for (Game g : library){
-                g.showDetail();
-                System.out.println("-----------");
-            }
+        for (Game g : library)
+        {
+            g.showDetail();
+            System.out.println("-----------");
         }
     }
 }
