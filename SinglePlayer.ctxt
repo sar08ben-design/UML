@@ -1,14 +1,22 @@
 #BlueJ class context
 comment0.target=SinglePlayer
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ h\ here.\r\n\r\n\ @author\ (Anuj)\r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ Represents\ a\ single-player\ game\ mode.\r\n\ Extends\ Game\ with\ extra\ data\ such\ as\ seed,\ save\ world\ flag,\r\n\ current\ level,\ and\ difficulty.\r\n\r\n\ @author\ Anuj\r\n\ @version\ May\ 2026\r\n
 comment1.params=title\ genre\ ageRating\ platform\ userRating\ seed\ saveWorld\ level\ difficulty
 comment1.target=SinglePlayer(java.lang.String,\ Genre,\ AgeRating,\ Platform,\ double,\ int,\ boolean,\ int,\ java.lang.String)
+comment1.text=\r\n\ Creates\ a\ SinglePlayer\ game\ object.\r\n\r\n\ @param\ title\ the\ title\ of\ the\ game\r\n\ @param\ genre\ the\ genre\ of\ the\ game\r\n\ @param\ ageRating\ the\ age\ rating\ of\ the\ game\r\n\ @param\ platform\ the\ platform\ of\ the\ game\r\n\ @param\ userRating\ the\ user\ rating\ from\ 0\ to\ 5\r\n\ @param\ seed\ the\ random\ world\ seed\r\n\ @param\ saveWorld\ true\ if\ the\ world\ should\ be\ saved,\ false\ otherwise\r\n\ @param\ level\ the\ current\ level\r\n\ @param\ difficulty\ the\ difficulty\ setting\r\n
 comment2.params=
 comment2.target=void\ loadGame()
+comment2.text=\r\n\ Loads\ the\ single-player\ game\ and\ prints\ its\ state.\r\n
 comment3.params=
 comment3.target=void\ saveGame()
+comment3.text=\r\n\ Saves\ the\ single-player\ game\ and\ prints\ save\ status.\r\n
 comment4.params=
 comment4.target=void\ showProgress()
+comment4.text=\r\n\ Displays\ the\ current\ progress\ of\ the\ single-player\ game.\r\n
 comment5.params=o
 comment5.target=boolean\ equals(java.lang.Object)
-numComments=6
+comment5.text=\r\n\ Compares\ this\ SinglePlayer\ game\ with\ another\ object.\r\n\r\n\ @param\ o\ the\ object\ to\ compare\r\n\ @return\ true\ if\ the\ objects\ are\ equal,\ false\ otherwise\r\n
+comment6.params=
+comment6.target=int\ hashCode()
+comment6.text=\r\n\ Returns\ the\ hash\ code\ for\ this\ SinglePlayer\ game.\r\n\r\n\ @return\ the\ hash\ code\ value\r\n
+numComments=7
