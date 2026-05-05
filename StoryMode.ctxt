@@ -1,14 +1,19 @@
 #BlueJ class context
 comment0.target=StoryMode
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ h\ here.\r\n\r\n\ @author\ (Anuj)\r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ Represents\ a\ story\ mode\ for\ a\ single-player\ game.\r\n\ Extends\ SinglePlayer\ with\ chapter,\ mission,\ and\ final\ boss\ status.\r\n\r\n\ @author\ Anuj\r\n\ @version\ May\ 2026\r\n
 comment1.params=title\ genre\ ageRating\ platform\ userRating\ seed\ saveWorld\ level\ difficulty\ chapterName\ missionNumber\ finalBossUnlocked
 comment1.target=StoryMode(java.lang.String,\ Genre,\ AgeRating,\ Platform,\ double,\ int,\ boolean,\ int,\ java.lang.String,\ java.lang.String,\ int,\ boolean)
+comment1.text=\r\n\ Creates\ a\ StoryMode\ game\ object.\r\n\r\n\ @param\ title\ the\ title\ of\ the\ game\r\n\ @param\ genre\ the\ genre\ of\ the\ game\r\n\ @param\ ageRating\ the\ age\ rating\ of\ the\ game\r\n\ @param\ platform\ the\ platform\ of\ the\ game\r\n\ @param\ userRating\ the\ user\ rating\ from\ 0\ to\ 5\r\n\ @param\ seed\ the\ random\ world\ seed\r\n\ @param\ saveWorld\ true\ if\ the\ world\ should\ be\ saved,\ false\ otherwise\r\n\ @param\ level\ the\ current\ level\r\n\ @param\ difficulty\ the\ difficulty\ setting\r\n\ @param\ chapterName\ the\ current\ chapter\ name\r\n\ @param\ missionNumber\ the\ current\ mission\ number\r\n\ @param\ finalBossUnlocked\ true\ if\ the\ final\ boss\ is\ unlocked\r\n
 comment2.params=
 comment2.target=void\ showChapter()
+comment2.text=\r\n\ Displays\ the\ current\ chapter\ name.\r\n
 comment3.params=
 comment3.target=void\ nextMission()
+comment3.text=\r\n\ Moves\ to\ the\ next\ mission\ and\ prints\ the\ new\ mission\ number.\r\n
 comment4.params=
 comment4.target=void\ unlockFinalBoss()
+comment4.text=\r\n\ Unlocks\ the\ final\ boss\ and\ prints\ a\ message.\r\n
 comment5.params=
 comment5.target=java.lang.String\ toString()
+comment5.text=\r\n\ Returns\ a\ string\ representation\ of\ this\ StoryMode\ instance.\r\n\r\n\ @return\ a\ string\ describing\ the\ StoryMode\r\n
 numComments=6
