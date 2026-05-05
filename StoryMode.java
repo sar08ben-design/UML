@@ -1,4 +1,10 @@
 
+/**
+ * Write a description of class h here.
+ *
+ * @author (Anuj)
+ * @version (a version number or a date)
+ */
 public class StoryMode extends SinglePlayer
 {
     private String chapterName;
@@ -32,5 +38,13 @@ public class StoryMode extends SinglePlayer
     {
         finalBossUnlocked = true;
         System.out.println("Final boss unlocked!");
+    }
+    
+    @Override
+    public String toString()
+    {
+        return super.toString() + ", StoryMode{" + "chapterName='" + 
+            chapterName + '\'' + ", missionNumber=" + missionNumber + 
+            ", finalBossUnlocked=" + finalBossUnlocked +'}';
     }
 }

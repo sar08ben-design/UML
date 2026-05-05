@@ -1,6 +1,11 @@
 import java.util.HashSet;
 
-public class GameLibrary
+/**
+ * Write a description of class h here.
+ *
+ * @author (Sarah)
+ * @version (a version number or a date)
+ */public class GameLibrary
 {
     public HashSet<Game> library;   
     
@@ -33,7 +38,18 @@ public class GameLibrary
     public AgeRating gameAgeRating(Game g){
     return g.getAgeRating();
     }
-
+    
+    public boolean gameInLibrary(String title) {
+        for (Game g : library) {
+            if (g.getTitle().equals(title)) {
+                return true;
+            }
+        }
+        return false;
+    }
+    public void listGameDetail(Game g){
+        g.showDetail();
+    }
     public void listAllGame()
     {
         for(Game g : library)

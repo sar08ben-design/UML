@@ -1,4 +1,10 @@
 
+/**
+ * Write a description of class h here.
+ *
+ * @author (Anuj)
+ * @version (a version number or a date)
+ */
 public class SinglePlayer extends Game
 {
     private int seed;
@@ -37,6 +43,19 @@ public class SinglePlayer extends Game
         System.out.println("Current level: " + level);
         System.out.println("Difficulty: " + difficulty);
         System.out.println("Save world status: " + saveWorld);
+    }
+    
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        if (!super.equals(o)) return false;
+    
+        SinglePlayer other = (SinglePlayer) o;
+        return seed == other.seed &&
+               saveWorld == other.saveWorld &&
+               level == other.level &&
+               difficulty.equalsIgnoreCase(other.difficulty);
     }
 }
 

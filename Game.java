@@ -1,5 +1,11 @@
 import java.util.HashSet;
 
+/**
+ * Write a description of class h here.
+ *
+ * @author (Sarah, Anuj)
+ * @version (a version number or a date)
+ */
 public class Game {
 
     private String title;
@@ -33,11 +39,12 @@ public class Game {
         System.out.println("User rating: " + userRating);
         System.out.println("In progress: " + inProgress);
     }
-
+    
     public void updateRating(double newRating) {
         if (newRating < 0 || newRating > 5) {
             System.out.println("Invalid rating (0–5).");
             return;
+            
         }
         this.userRating = newRating;
     }
@@ -68,20 +75,23 @@ public class Game {
     
     @Override
     public boolean equals(Object o) {
-        if (this == o){
-            return true;
-        }
-        if (!(o instanceof Game)){
-            return false;
-        }
+        if (this == o) return true;
+        if (!(o instanceof Game)) return false;
+    
         Game other = (Game) o;
-        return title.equalsIgnoreCase(other.title)
-               && platform == other.platform;
+        return title.equalsIgnoreCase(other.title) &&
+               platform == other.platform;
     }
-
+    
     @Override
     public int hashCode() {
-        return title.toLowerCase().hashCode() * 31 + platform.hashCode();
+        return title.toLowerCase().hashCode() + platform.hashCode();
     }
-
+    
+    @Override
+    public String toString() {
+        return "Game{" + "title='" + title + '\'' + ", genre=" + genre + 
+            ", ageRating=" + ageRating + ", platform=" + platform + 
+            ", userRating=" + userRating + ", inProgress=" + inProgress + '}';
+    }
 }

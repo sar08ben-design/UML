@@ -1,7 +1,10 @@
 #BlueJ class context
 comment0.target=GameLibrary
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ h\ here.\r\n\r\n\ @author\ (Sarah)\r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
 comment1.params=
 comment1.target=GameLibrary()
+comment10.params=
+comment10.target=void\ listAllGame()
 comment2.params=g
 comment2.target=void\ addGame(Game)
 comment3.params=g
@@ -14,6 +17,8 @@ comment6.params=g
 comment6.target=Platform\ gamePlateform(Game)
 comment7.params=g
 comment7.target=AgeRating\ gameAgeRating(Game)
-comment8.params=
-comment8.target=void\ listAllGame()
-numComments=9
+comment8.params=title
+comment8.target=boolean\ gameInLibrary(java.lang.String)
+comment9.params=g
+comment9.target=void\ listGameDetail(Game)
+numComments=11
