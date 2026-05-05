@@ -48,7 +48,19 @@ public class GameLibrary
     {
         return g.getTitle();
     }
-
+    
+    public double listTopGames(){
+        double rating=0;
+        for (Game g: library){
+            double r = g.getUserRating();
+            if (r>rating){
+                rating=r;
+                System.out.println(rating);
+            }
+        }
+        return rating;
+    }
+    
     /**
      * Returns the genre of a game.
      *
