@@ -14,7 +14,7 @@ javac *.java
 java Driver
 
 AUTHORS:
-Sarah, Anuj
+Sarra, Anuj
 
 USER INSTRUCTIONS:
 ##Files
