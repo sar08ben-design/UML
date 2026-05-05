@@ -10,7 +10,7 @@ public class StoryMode extends SinglePlayer
     private String chapterName;
     private int missionNumber;
     private boolean finalBossUnlocked;
-
+    
     public StoryMode(String title, Genre genre, AgeRating ageRating,
                      Platform platform, double userRating,
                      int seed, boolean saveWorld, int level, String difficulty,
