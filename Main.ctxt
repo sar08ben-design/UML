@@ -1,5 +1,5 @@
 #BlueJ class context
-comment0.target=Driver
+comment0.target=Main
 comment0.text=\r\n\ Driver\ class\ for\ the\ Game\ Library\ program.\r\n\ Provides\ a\ menu\ to\ create\ and\ manage\ different\ kinds\ of\ games.\r\n
 comment1.params=args
 comment1.target=void\ main(java.lang.String[])
