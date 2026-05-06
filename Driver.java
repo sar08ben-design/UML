@@ -2,18 +2,14 @@ import java.util.Scanner;
 
 /**
  * Driver class for the Game Library program.
- * Displays a menu and allows the user to manage games.
- *
- * @author Sarah, Anuj
- * @version May 2026
+ * Provides a menu to create and manage different kinds of games.
  */
 public class Driver
 {
     /**
-     * Main method of the program.
-     * Runs the menu-driven game library system.
+     * Entry point of the program.
      *
-     * @param args command-line arguments
+     * @param args command line arguments
      */
     public static void main(String[] args)
     {
@@ -23,13 +19,12 @@ public class Driver
 
         while (running)
         {
-            displayMenu();
-
+            displayMainMenu();
             System.out.print("Enter your choice: ");
 
             if (!scanner.hasNextInt())
             {
-                System.out.println("Invalid input. Please enter a number from 1 to 4.");
+                System.out.println("Invalid input. Please enter a number.");
                 scanner.nextLine();
                 continue;
             }
@@ -54,12 +49,11 @@ public class Driver
 
                 case 4:
                     running = false;
-                    System.out.println("\nThank you for using the Game Library program.");
-                    System.out.println("Program closed successfully.");
+                    System.out.println("\nThank you for using the Game Library.");
                     break;
 
                 default:
-                    System.out.println("Invalid menu choice. Please select 1, 2, 3, or 4.");
+                    System.out.println("Invalid option. Please choose 1–4.");
             }
         }
 
@@ -69,7 +63,7 @@ public class Driver
     /**
      * Displays the main menu.
      */
-    public static void displayMenu()
+    public static void displayMainMenu()
     {
         System.out.println("\n==================================");
         System.out.println("        GAME LIBRARY MENU         ");
@@ -82,46 +76,193 @@ public class Driver
     }
 
     /**
-     * Handles the menu option for adding a game.
+     * Shows the add-game submenu and creates the selected type.
      *
-     * @param scanner the scanner used for input
+     * @param scanner scanner for user input
      * @param library the game library
      */
     public static void addGameMenu(Scanner scanner, GameLibrary library)
     {
+        System.out.println("\n--- Add a Game ---");
+        System.out.println("1. Basic Game");
+        System.out.println("2. SinglePlayer");
+        System.out.println("3. StoryMode");
+        System.out.println("4. MultiPlayer");
+        System.out.println("5. Local");
+        System.out.println("6. Online");
+        System.out.print("Choose game type: ");
+
+        if (!scanner.hasNextInt())
+        {
+            System.out.println("Invalid input. Please enter a number.");
+            scanner.nextLine();
+            return;
+        }
+
+        int type = scanner.nextInt();
+        scanner.nextLine();
+
+        // common fields
+        System.out.print("Enter title: ");
+        String title = scanner.nextLine();
+
+        System.out.print("Enter genre (ACTION, ADVENTURE, STRATEGY, SPORT, OPENWORLD, GAMBLE): ");
+        Genre genre = Genre.valueOf(scanner.nextLine().toUpperCase());
+
+        System.out.print("Enter age rating (E, E10, T, M, AO): ");
+        AgeRating ageRating = AgeRating.valueOf(scanner.nextLine().toUpperCase());
+
+        System.out.print("Enter platform (PC, MOBILE, PLAYSTATION, NINTENDO, XBOX): ");
+        Platform platform = Platform.valueOf(scanner.nextLine().toUpperCase());
+
+        System.out.print("Enter user rating (0–5): ");
+        if (!scanner.hasNextDouble())
+        {
+            System.out.println("Invalid rating. Game not added.");
+            scanner.nextLine();
+            return;
+        }
+
+        double userRating = scanner.nextDouble();
+        scanner.nextLine();
+
         try
         {
-            System.out.println("\n--- Add a New Game ---");
-
-            System.out.print("Enter title: ");
-            String title = scanner.nextLine();
-
-            System.out.print("Enter genre (ACTION, ADVENTURE, STRATEGY, SPORT, OPENWORLD, GAMBLE): ");
-            Genre genre = Genre.valueOf(scanner.nextLine().toUpperCase());
-
-            System.out.print("Enter age rating (E, E10, T, M, AO): ");
-            AgeRating ageRating = AgeRating.valueOf(scanner.nextLine().toUpperCase());
-
-            System.out.print("Enter platform (PC, MOBILE, PLAYSTATION, NINTENDO, XBOX): ");
-            Platform platform = Platform.valueOf(scanner.nextLine().toUpperCase());
-
-            System.out.print("Enter user rating (0 to 5): ");
-
-            if (!scanner.hasNextDouble())
+            switch (type)
             {
-                System.out.println("Invalid rating. Please enter a number.");
-                scanner.nextLine();
-                return;
+                case 1:
+                {
+                    Game game = new Game(title, genre, ageRating, platform, userRating);
+                    library.addGame(game);
+                    System.out.println("Basic game added.");
+                    break;
+                }
+
+                case 2:
+                {
+                    System.out.print("Enter seed: ");
+                    int seed = scanner.nextInt();
+                    System.out.print("Save world (true/false): ");
+                    boolean saveWorld = scanner.nextBoolean();
+                    System.out.print("Enter level: ");
+                    int level = scanner.nextInt();
+                    scanner.nextLine();
+                    System.out.print("Enter difficulty: ");
+                    String difficulty = scanner.nextLine();
+
+                    SinglePlayer sp = new SinglePlayer(title, genre, ageRating, platform,
+                                                       userRating, seed, saveWorld, level, difficulty);
+                    library.addGame(sp);
+                    System.out.println("SinglePlayer game added.");
+                    break;
+                }
+
+                case 3:
+                {
+                    System.out.print("Enter seed: ");
+                    int seed = scanner.nextInt();
+                    System.out.print("Save world (true/false): ");
+                    boolean saveWorld = scanner.nextBoolean();
+                    System.out.print("Enter level: ");
+                    int level = scanner.nextInt();
+                    scanner.nextLine();
+                    System.out.print("Enter difficulty: ");
+                    String difficulty = scanner.nextLine();
+                    System.out.print("Enter chapter name: ");
+                    String chapterName = scanner.nextLine();
+                    System.out.print("Enter mission number: ");
+                    int missionNumber = scanner.nextInt();
+                    System.out.print("Final boss unlocked (true/false): ");
+                    boolean finalBossUnlocked = scanner.nextBoolean();
+                    scanner.nextLine();
+
+                    StoryMode sm = new StoryMode(title, genre, ageRating, platform,
+                                                 userRating, seed, saveWorld, level, difficulty,
+                                                 chapterName, missionNumber, finalBossUnlocked);
+                    library.addGame(sm);
+                    System.out.println("StoryMode game added.");
+                    break;
+                }
+
+                case 4:
+                {
+                    System.out.print("Enter party members: ");
+                    int partyMembers = scanner.nextInt();
+                    scanner.nextLine();
+                    System.out.print("Enter player ID: ");
+                    String playerId = scanner.nextLine();
+                    System.out.print("Enter max players: ");
+                    int maxPlayer = scanner.nextInt();
+                    scanner.nextLine();
+                    System.out.print("Enter host name: ");
+                    String hostName = scanner.nextLine();
+
+                    MultiPlayer mp = new MultiPlayer(title, genre, ageRating, platform,
+                                                     userRating, partyMembers, playerId, maxPlayer, hostName);
+                    library.addGame(mp);
+                    System.out.println("MultiPlayer game added.");
+                    break;
+                }
+
+                case 5:
+                {
+                    System.out.print("Enter party members: ");
+                    int partyMembers = scanner.nextInt();
+                    scanner.nextLine();
+                    System.out.print("Enter player ID: ");
+                    String playerId = scanner.nextLine();
+                    System.out.print("Enter max players: ");
+                    int maxPlayer = scanner.nextInt();
+                    scanner.nextLine();
+                    System.out.print("Enter host name: ");
+                    String hostName = scanner.nextLine();
+                    System.out.print("Enter controller count: ");
+                    int controllerCount = scanner.nextInt();
+                    System.out.print("Split screen (true/false): ");
+                    boolean splitScreen = scanner.nextBoolean();
+                    scanner.nextLine();
+                    System.out.print("Enter location: ");
+                    String location = scanner.nextLine();
+
+                    Local local = new Local(title, genre, ageRating, platform,
+                                            userRating, partyMembers, playerId, maxPlayer, hostName,
+                                            controllerCount, splitScreen, location);
+                    library.addGame(local);
+                    System.out.println("Local multiplayer game added.");
+                    break;
+                }
+
+                case 6:
+                {
+                    System.out.print("Enter party members: ");
+                    int partyMembers = scanner.nextInt();
+                    scanner.nextLine();
+                    System.out.print("Enter player ID: ");
+                    String playerId = scanner.nextLine();
+                    System.out.print("Enter max players: ");
+                    int maxPlayer = scanner.nextInt();
+                    scanner.nextLine();
+                    System.out.print("Enter host name: ");
+                    String hostName = scanner.nextLine();
+                    System.out.print("Enter server name: ");
+                    String serverName = scanner.nextLine();
+                    System.out.print("Enter ping: ");
+                    int ping = scanner.nextInt();
+                    System.out.print("Connected (true/false): ");
+                    boolean connected = scanner.nextBoolean();
+                    scanner.nextLine();
+
+                    Online online = new Online(title, genre, ageRating, platform,
+                                               userRating, partyMembers, playerId, maxPlayer, hostName,
+                                               serverName, ping, connected);
+                    library.addGame(online);
+                    System.out.println("Online multiplayer game added.");
+                    break;
+                }
+
+                default:
+                    System.out.println("Invalid game type. Game not added.");
             }
-
-            double userRating = scanner.nextDouble();
-            scanner.nextLine();
-
-            Game game = new Game(title, genre, ageRating, platform, userRating);
-            library.addGame(game);
-
-            System.out.println("\nGame added successfully.");
-            System.out.println("Added game: " + game);
         }
         catch (IllegalArgumentException e)
         {
@@ -130,9 +271,9 @@ public class Driver
     }
 
     /**
-     * Handles the menu option for removing a game.
+     * Handles removing a game by title.
      *
-     * @param scanner the scanner used for input
+     * @param scanner scanner for user input
      * @param library the game library
      */
     public static void removeGameMenu(Scanner scanner, GameLibrary library)
@@ -141,11 +282,11 @@ public class Driver
         System.out.print("Enter the title of the game to remove: ");
         String title = scanner.nextLine();
 
-        Game gameToRemove = library.findGameByTitle(title);
+        Game toRemove = library.findGameByTitle(title);
 
-        if (gameToRemove != null)
+        if (toRemove != null)
         {
-            library.removeGame(gameToRemove);
+            library.removeGame(toRemove);
             System.out.println("Game removed successfully.");
         }
         else

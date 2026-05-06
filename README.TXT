@@ -2,16 +2,16 @@ PROJECT TITLE: Game Project
 
 PURPOSE OF PROJECT:
 This project is a Java program that manages a collection of 
-games using object-oriented programming. It demonstrates classes, inheritance, enums, and a HashSet-based game library.
+games using object-oriented programming. It demonstrates classes, 
+inheritance, enums, and a HashSet-based game library.
 
 VERSION or DATE:
 May 1, 2026
 
 HOW TO START THIS PROJECT:
-Open the project in BlueJ and compile all classes.
-To run outside BlueJ, open a terminal in the project folder and use:
-javac *.java
-java Driver
+press Compile to compile all classes, then right‑click the Driver class, 
+choose void main(String[] args), and confirm to start the menu.
+
 
 AUTHORS:
 Sarra, Anuj

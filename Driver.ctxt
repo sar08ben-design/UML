@@ -1,16 +1,16 @@
 #BlueJ class context
 comment0.target=Driver
-comment0.text=\r\n\ Driver\ class\ for\ the\ Game\ Library\ program.\r\n\ Displays\ a\ menu\ and\ allows\ the\ user\ to\ manage\ games.\r\n\r\n\ @author\ Sarah,\ Anuj\r\n\ @version\ May\ 2026\r\n
+comment0.text=\r\n\ Driver\ class\ for\ the\ Game\ Library\ program.\r\n\ Provides\ a\ menu\ to\ create\ and\ manage\ different\ kinds\ of\ games.\r\n
 comment1.params=args
 comment1.target=void\ main(java.lang.String[])
-comment1.text=\r\n\ Main\ method\ of\ the\ program.\r\n\ Runs\ the\ menu-driven\ game\ library\ system.\r\n\r\n\ @param\ args\ command-line\ arguments\r\n
+comment1.text=\r\n\ Entry\ point\ of\ the\ program.\r\n\r\n\ @param\ args\ command\ line\ arguments\r\n
 comment2.params=
-comment2.target=void\ displayMenu()
+comment2.target=void\ displayMainMenu()
 comment2.text=\r\n\ Displays\ the\ main\ menu.\r\n
 comment3.params=scanner\ library
 comment3.target=void\ addGameMenu(java.util.Scanner,\ GameLibrary)
-comment3.text=\r\n\ Handles\ the\ menu\ option\ for\ adding\ a\ game.\r\n\r\n\ @param\ scanner\ the\ scanner\ used\ for\ input\r\n\ @param\ library\ the\ game\ library\r\n
+comment3.text=\r\n\ Shows\ the\ add-game\ submenu\ and\ creates\ the\ selected\ type.\r\n\r\n\ @param\ scanner\ scanner\ for\ user\ input\r\n\ @param\ library\ the\ game\ library\r\n
 comment4.params=scanner\ library
 comment4.target=void\ removeGameMenu(java.util.Scanner,\ GameLibrary)
-comment4.text=\r\n\ Handles\ the\ menu\ option\ for\ removing\ a\ game.\r\n\r\n\ @param\ scanner\ the\ scanner\ used\ for\ input\r\n\ @param\ library\ the\ game\ library\r\n
+comment4.text=\r\n\ Handles\ removing\ a\ game\ by\ title.\r\n\r\n\ @param\ scanner\ scanner\ for\ user\ input\r\n\ @param\ library\ the\ game\ library\r\n
 numComments=5
