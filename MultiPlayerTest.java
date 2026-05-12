@@ -58,7 +58,7 @@ public class MultiPlayerTest
     }
 
     @Test
-    public void host()
+    public void checkHost()
     {
      
        multiPla4.getHostName();

@@ -49,16 +49,17 @@ public class GameLibrary
         return g.getTitle();
     }
     
-    public double listTopGames(){
+    public String getTopGame(){
         double rating=0;
+        String gameTitle="";
         for (Game g: library){
             double r = g.getUserRating();
             if (r>rating){
                 rating=r;
-                System.out.println(rating);
+                gameTitle= g.getTitle();
             }
         }
-        return rating;
+        return gameTitle + " has a " + rating + " out of 5";
     }
     
     /**

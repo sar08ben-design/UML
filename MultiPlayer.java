@@ -58,7 +58,7 @@ public class MultiPlayer extends Game
     {
         if (id == null || id.trim().isEmpty()){
             System.out.println("Invalid player ID.");
-            return;
+            
         }
 
         if (playerIds.contains(id)){
