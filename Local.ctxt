@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=Local
-comment0.text=\r\n\ Represents\ a\ local\ multiplayer\ game.\r\n\ Extends\ MultiPlayer\ with\ setup\ information\ for\ local\ matches.\r\n\r\n\ @author\ Sarah\r\n\ @version\ May\ 2026\r\n
+comment0.text=\r\n\ Represents\ a\ local\ multiplayer\ game.\r\n\ Extends\ MultiPlayer\ with\ setup\ information\ for\ local\ matches.\r\n\r\n\ @author\ Sarra\r\n\ @version\ May\ 2026\r\n
 comment1.params=title\ genre\ ageRating\ platform\ userRating\ partyMembers\ playerId\ maxPlayer\ hostName\ controllerCount\ splitScreen\ location
 comment1.target=Local(java.lang.String,\ Genre,\ AgeRating,\ Platform,\ double,\ int,\ java.lang.String,\ int,\ java.lang.String,\ int,\ boolean,\ java.lang.String)
 comment1.text=\r\n\ Creates\ a\ Local\ multiplayer\ game\ object.\r\n\r\n\ @param\ title\ the\ title\ of\ the\ game\r\n\ @param\ genre\ the\ genre\ of\ the\ game\r\n\ @param\ ageRating\ the\ age\ rating\ of\ the\ game\r\n\ @param\ platform\ the\ platform\ of\ the\ game\r\n\ @param\ userRating\ the\ user\ rating\ from\ 0\ to\ 5\r\n\ @param\ partyMembers\ the\ number\ of\ party\ members\r\n\ @param\ playerId\ the\ player\ ID\r\n\ @param\ maxPlayer\ the\ maximum\ number\ of\ players\r\n\ @param\ hostName\ the\ host\ name\r\n\ @param\ controllerCount\ the\ number\ of\ controllers\r\n\ @param\ splitScreen\ true\ if\ split-screen\ is\ enabled,\ false\ otherwise\r\n\ @param\ location\ the\ match\ location\r\n

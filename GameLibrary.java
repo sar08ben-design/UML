@@ -3,7 +3,7 @@ import java.util.HashSet;
 /**
  * Represents a library that stores Game objects.
  *
- * @author Sarah
+ * @author Sarra
  * @version May 2026
  */
 public class GameLibrary
@@ -38,62 +38,85 @@ public class GameLibrary
         library.remove(g);
     }
 
+    
+    
     /**
-     * Returns the title of a game.
+     * Returns the 3 best ranking games..
      *
-     * @param g the game object
-     * @return the title of the game
+     * 
+     * @return the title of the games and their ranking
      */
-    public String gameName(Game g)
-    {
-        return g.getTitle();
-    }
     
     public String getTopGame(){
-        double rating=0;
-        String gameTitle="";
-        for (Game g: library){
-            double r = g.getUserRating();
-            if (r>rating){
-                rating=r;
-                gameTitle= g.getTitle();
+        String result="";
+        
+            for (int rank=1; rank<4;rank++){
+                double rating=0;
+                String gameTitle="";
+                for (Game g: library){
+                double r = g.getUserRating();
+                if (r>rating && !result.contains(g.getTitle())){
+                    rating=r;
+                    gameTitle= g.getTitle();
+                }
             }
+            result += rank + ". " + gameTitle + "-"+ rating + "/5\n";
+            //learned \n in arduino workshop
         }
-        return gameTitle + " has a " + rating + " out of 5";
+        return result;
     }
     
     /**
-     * Returns the genre of a game.
+     * Returns the 3 top ranked games by genre.
      *
-     * @param g the game object
-     * @return the genre of the game
+     * @param genre the genre to filter by
+     * @return the top 3 games and their ratings for that genre
      */
-    public Genre gameGenre(Game g)
-    {
-        return g.getGenre();
+        public String getTopGameByGenre(Genre genre) {
+        String result = "";
+        
+        for (int rank = 1; rank < 4; rank++) {
+            double rating = 0;
+            String gameTitle = "";
+            for (Game g : library) {
+                double r = g.getUserRating();
+                if (g.getGenre().equals(genre) && r > rating &&
+                !result.contains(g.getTitle())) {
+                    rating = r;
+                    gameTitle = g.getTitle();
+                }
+            }
+            result += rank + ". " + gameTitle + " - " + rating + "/5\n";
+        }
+        return result;
     }
-
+    
     /**
-     * Returns the platform of a game.
+     * Returns the 3 top ranked games by platform.
      *
-     * @param g the game object
-     * @return the platform of the game
+     * @param platform the platform to filter by
+     * @return the top 3 games and their ratings for that platform
      */
-    public Platform gamePlatform(Game g)
-    {
-        return g.getPlatform();
+    
+    public String getTopGameByPlatform(Platform platform) {
+        String result = "";
+        
+        for (int rank = 1; rank < 4; rank++) {
+            double rating = 0;
+            String gameTitle = "";
+            for (Game g : library) {
+                double r = g.getUserRating();
+                if (g.getPlatform().equals(platform) && 
+                r > rating && !result.contains(g.getTitle())) {
+                    rating = r;
+                    gameTitle = g.getTitle();
+                }
+            }
+            result += rank + ". " + gameTitle + " - " + rating + "/5\n";
+        }
+        return result;
     }
-
-    /**
-     * Returns the age rating of a game.
-     *
-     * @param g the game object
-     * @return the age rating of the game
-     */
-    public AgeRating gameAgeRating(Game g)
-    {
-        return g.getAgeRating();
-    }
+   
 
     /**
      * Checks whether a game title exists in the library.
@@ -138,15 +161,6 @@ public class GameLibrary
         return null;
     }
 
-    /**
-     * Displays the details of one game.
-     *
-     * @param g the game to display
-     */
-    public void listGameDetail(Game g)
-    {
-        g.showDetail();
-    }
 
     /**
      * Displays all games in the library.
@@ -157,6 +171,65 @@ public class GameLibrary
         {
             g.showDetail();
             System.out.println("-----------");
+        }
+    }
+    /**
+     * Displays all games in the library that match the given genre.
+     *
+     * @param ge the genre to filter by
+     */
+    public void listByGenre(Genre ge) {
+        for (Game g : library) {
+            if (g.getGenre().equals(ge)) {
+                g.showDetail();
+                System.out.println("-----------");
+            }
+        }
+    }
+    /**
+     * Displays all games in the library that match the given platform.
+     *
+     * @param p the platform to filter by
+     */
+    public void listByPlatform(Platform p) {
+        for (Game g : library) {
+            if (g.getPlatform().equals(p)) {
+                g.showDetail();
+                System.out.println("-----------");
+            }
+        }
+    }
+    /**
+     * Displays all games in the library that match the given age rating.
+     *
+     * @param a the age rating to filter by
+     */
+    public void listByAgeRating(AgeRating a) {
+        for (Game g : library) {
+            if (g.getAgeRating().equals(a)) {
+                g.showDetail();
+                System.out.println("-----------");
+            }
+        }
+    }
+    
+    /**
+     * Displays all games in the library that match the given type.
+     * Type can be "multiplayer" or "singleplayer".
+     *
+     * @param type the type of game to filter by
+     */
+        public void listByType(String type) {
+        for (Game g : library) {
+            if (type.equalsIgnoreCase("multiplayer") && g instanceof MultiPlayer) {
+                System.out.println("Type: " + g.getClass().getSimpleName()); //There's a method called get name but it also prints the path which is useless
+                
+                g.showDetail();
+                System.out.println("-----------");
+            } else if (type.equalsIgnoreCase("singleplayer") && g instanceof SinglePlayer) {
+                g.showDetail();
+                System.out.println("-----------");
+            }
         }
     }
 }

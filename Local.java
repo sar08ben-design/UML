@@ -3,7 +3,7 @@
  * Represents a local multiplayer game.
  * Extends MultiPlayer with setup information for local matches.
  *
- * @author Sarah
+ * @author Sarra
  * @version May 2026
  */
 public class Local extends MultiPlayer

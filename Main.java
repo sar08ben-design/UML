@@ -48,12 +48,49 @@ public class Main
                     break;
 
                 case 4:
+                    System.out.println("\n===== TOP 3 GAMES =====");
+                    System.out.println(library.getTopGame());
+                    break;
+            
+                case 5:
+                    System.out.print("Enter genre (ACTION, ADVENTURE, STRATEGY,SPORT, OPENWORLD, GAMBLE): ");
+                    Genre genre = Genre.valueOf(scanner.nextLine().toUpperCase());
+                    library.listByGenre(genre);
+                    break;
+                
+                case 6:
+                    System.out.print("Enter platform (PC, MOBILE, PLAYSTATION, NINTENDO, XBOX): ");
+                    Platform platform = Platform.valueOf(scanner.nextLine().toUpperCase());
+                    library.listByPlatform(platform);
+                    break;
+                
+                case 7:
+                    System.out.print("Enter genre (ACTION, ADVENTURE, STRATEGY, SPORT, OPENWORLD, GAMBLE): ");
+                    Genre genre2 = Genre.valueOf(scanner.nextLine().toUpperCase());
+                    System.out.println(library.getTopGameByGenre(genre2));
+                    // can't reuse variable name twice in same switch so used genre2/plateform2 
+                   
+                    break;
+                
+                case 8:
+                    System.out.print("Enter platform (PC, MOBILE, PLAYSTATION, NINTENDO, XBOX): ");
+                    Platform platform2 = Platform.valueOf(scanner.nextLine().toUpperCase());
+                    System.out.println(library.getTopGameByPlatform(platform2));
+                    break;
+                
+                case 9:
+                    System.out.print("Enter type (multiplayer or singleplayer): ");
+                    String type = scanner.nextLine();
+                    library.listByType(type);
+                    break;
+                
+                case 10:
                     running = false;
                     System.out.println("\nThank you for using the Game Library.");
                     break;
 
                 default:
-                    System.out.println("Invalid option. Please choose 1–4.");
+                    System.out.println("Invalid option. Please choose 1–9.");
             }
         }
 
@@ -71,7 +108,13 @@ public class Main
         System.out.println("1. Add a game");
         System.out.println("2. Remove a game");
         System.out.println("3. List all games");
-        System.out.println("4. Exit");
+        System.out.println("4. Top 3 games");
+        System.out.println("5. Search by genre");
+        System.out.println("6. Search by platform");
+        System.out.println("7. Top 3 by genre");
+        System.out.println("8. Top 3 by platform");
+        System.out.println("9. Search by type");
+        System.out.println("10. Exit");
         System.out.println("==================================");
     }
 

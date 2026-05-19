@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Test;
 /**
  * The test class GameLibraryTest.
  *
- * @author  (your name)
+ * @author  (Sarra)
  * @version (a version number or a date)
  */
 public class GameLibraryTest

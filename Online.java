@@ -2,7 +2,7 @@
  * Represents an online multiplayer game.
  * Extends MultiPlayer with server connection details.
  *
- * @author Sarah
+ * @author Sarra
  * @version May 2026
  */
 public class Online extends MultiPlayer
