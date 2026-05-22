@@ -55,14 +55,18 @@ public class GameLibraryTest
     public void tearDown()
     {
     }
+    
     /**
-     * Tests that searchs for the highest ranked game.
+     * Tests that searchs for the 3 highest ranked game.
      */
-    @Test
-    public void checkTopGame()
+
+   @Test
+    public void testGetTopGameByGenre()
     {
-        assertEquals( "title3 has a 4.2 out of 5",gameLibr1.getTopGame());
+        assertEquals("1. title3 - 4.2/5\n2. title2 - 3.2/5\n3. title - 2.2/5\n", gameLibr1.getTopGameByGenre(Genre.ACTION));
     }
+    
+
     
     /**
      * Tests that a game added to the library can be found by title.

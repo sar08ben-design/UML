@@ -55,7 +55,7 @@ public class GameLibrary
                 String gameTitle="";
                 for (Game g: library){
                 double r = g.getUserRating();
-                if (r>rating && !result.contains(g.getTitle())){
+                if (r>rating && !result.contains(g.getTitle() + " - ")){
                     rating=r;
                     gameTitle= g.getTitle();
                 }
@@ -81,14 +81,16 @@ public class GameLibrary
             for (Game g : library) {
                 double r = g.getUserRating();
                 if (g.getGenre().equals(genre) && r > rating &&
-                !result.contains(g.getTitle())) {
+                !result.contains(g.getTitle() + " - ")) {
                     rating = r;
                     gameTitle = g.getTitle();
                 }
             }
             result += rank + ". " + gameTitle + " - " + rating + "/5\n";
         }
+        System.out.print(result);
         return result;
+        
     }
     
     /**
@@ -107,7 +109,7 @@ public class GameLibrary
             for (Game g : library) {
                 double r = g.getUserRating();
                 if (g.getPlatform().equals(platform) && 
-                r > rating && !result.contains(g.getTitle())) {
+                r > rating && !result.contains(g.getTitle() + " - ")) {
                     rating = r;
                     gameTitle = g.getTitle();
                 }
